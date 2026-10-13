@@ -1,0 +1,49 @@
+dependencies:
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/ir_learn:
+    component_hash: 4e138f36ee1834cba7163fdc6031c8ca2c2beb89c9378e37d2d17ae13f834f95
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32c3
+    - esp32c6
+    - esp32
+    - esp32h2
+    - esp32s2
+    - esp32s3
+    version: 1.0.1
+  example_init:
+    dependencies: []
+    source:
+      path: C:\Espressif\frameworks\esp-idf-v5.5.1\examples\bluetooth\esp_ble_mesh\common_components\example_init
+      type: local
+    version: '*'
+  idf:
+    source:
+      type: idf
+    version: 5.5.1
+direct_dependencies:
+- espressif/ir_learn
+- example_init
+- idf
+manifest_hash: 94a62861eedbc37d2864c28e21eaa6c65eb03c6319edb23a2e6b02659c968d8e
+target: esp32c3
+version: 2.0.0

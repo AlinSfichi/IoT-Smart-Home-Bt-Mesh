@@ -1,0 +1,6 @@
+dependencies:
+  example_init:
+    path: ${IDF_PATH}/examples/bluetooth/esp_ble_mesh/common_components/example_init
+  idf:
+    version: '>=4.1.0'
+  espressif/ir_learn: ^1.0.0
